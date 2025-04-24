@@ -1,0 +1,27 @@
+{
+  "name": "mtg-calc",
+  "version": "1.0.0",
+  "description": "an MtG calculator for computing the probability of being able to draw and play cards from a deck",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelmcelroy/mtg-calc.git"
+  },
+  "keywords": [
+    "magic",
+    "the",
+    "gathering",
+    "probability",
+    "calculator",
+    "mtg"
+  ],
+  "author": "Abel McElroy",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/abelmcelroy/mtg-calc/issues"
+  },
+  "homepage": "https://github.com/abelmcelroy/mtg-calc#readme"
+}
