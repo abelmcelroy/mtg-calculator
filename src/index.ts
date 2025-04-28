@@ -44,5 +44,5 @@ export function computeCurve(card: Card, deck: Deck, options?: AlgoOptions): Cal
 }
 
 export { scryfallToCard } from "./cardTransformationUtils";
-export { PartialScryfallCard, CardFace, CardType, Card, Deck, AlgoOptions, Calculations } from "./types";
+export { PartialScryfallCard, CardFace, CardType, Card, Deck, AlgoOptions, Calculations, ProbabilitiesOnGivenTurn, ProbabilityTypes, Probability } from "./types";
 

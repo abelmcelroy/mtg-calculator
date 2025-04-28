@@ -117,7 +117,7 @@ interface CardFace {
 }
 
 // Inputs:
-interface AlgoOptions {
+type AlgoOptions = {
   maxComplexity?: number, // default: 30,000 — a threshold that when crossed causes the algorithm to fallback on a statistical simulation. If set to 0, will never fallback on simulations
   upToTurn?: number, // default: card CMC — how long the list of calculations should be
   simulationOptions?: {

@@ -47,7 +47,7 @@ export type Calculations = {
  * @AlgoInputs
  */
 
-export interface AlgoOptions {
+export type AlgoOptions = {
   maxComplexity?: number,
   upToTurn?: number,
   simulationOptions?: {
