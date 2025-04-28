@@ -24,7 +24,7 @@ export interface CardFace {
  * @AlgoOutputs
  */
 
-export type Probability = number; // between 0-1, up to 20 decimal places
+export type Probability = string; // representing a number between 0-1, up to 20 decimal places
 
 export enum ProbabilityTypes {
   independent = "independent",

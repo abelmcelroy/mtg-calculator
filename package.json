@@ -1,6 +1,6 @@
 {
-  "name": "mtg-calc",
-  "version": "0.1.2",
+  "name": "mtg-calculator",
+  "version": "0.1.0",
   "description": "an MtG calculator for computing the probability of being able to draw and play cards from a deck",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,11 +24,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abelmcelroy/mtg-calc.git"
+    "url": "git+https://github.com/abelmcelroy/mtg-calculator.git"
   },
   "keywords": [
+    "magic the gathering",
     "magic",
-    "the",
+    "mtg-calculator",
+    "mtg-calc",
     "gathering",
     "probability",
     "calculator",
@@ -37,9 +39,9 @@
   "author": "Abel McElroy",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/abelmcelroy/mtg-calc/issues"
+    "url": "https://github.com/abelmcelroy/mtg-calculator/issues"
   },
-  "homepage": "https://github.com/abelmcelroy/mtg-calc#readme",
+  "homepage": "https://github.com/abelmcelroy/mtg-calculator#readme",
   "dependencies": {
     "bignumber.js": "^9.0.2"
   },

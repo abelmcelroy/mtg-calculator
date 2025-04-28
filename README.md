@@ -77,7 +77,7 @@ console.log(calculations); /* -> [
 ## API
 
 ### `computeCurve(card, deck, options)`
-Returns an array of calculations of being able to play the given card from the given deck.
+Returns an array of probabilities of being able to play the given card from the given deck, on the given turn. Where the index of the calculation in the list is `turn - 1`.
 
 **Parameters:**
 - `card` (Card, required): minimal card object transformed from Scryfall's API
@@ -121,7 +121,7 @@ type AlgoOptions = {
   maxComplexity?: number, // default: 30,000 — a threshold that when crossed causes the algorithm to fallback on a statistical simulation. If set to 0, will never fallback on simulations
   upToTurn?: number, // default: card CMC — how long the list of calculations should be
   simulationOptions?: {
-    iterations?: number // how many iterations of simulation should be done when complexity threshold is crossed
+    iterations?: number // default: 10,000 - how many iterations of the simulation should be done when complexity threshold is crossed
   };
 }
 
@@ -158,5 +158,5 @@ enum ProbabilityTypes {
   conditionalEnoughLand = "conditionalEnoughLand", // P of being able to draw and play the card given enough lands to play its CMC
 }
 
-type Probability = number // between 0-1, up to 20 decimal places
+type Probability = string // representing a number between 0-1, up to 20 decimal places
 ```
