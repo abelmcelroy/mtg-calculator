@@ -2,9 +2,23 @@
   "name": "mtg-calc",
   "version": "1.0.0",
   "description": "an MtG calculator for computing the probability of being able to draw and play cards from a deck",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "tests": "tap --timeout=0 ./tests/algorithm/*.js",
+    "get-ready": "./scripts/init.sh",
+    "get-data": "./scripts/get_all_data.sh",
+    "clear-data": "./scripts/clear_data.sh",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -23,5 +37,13 @@
   "bugs": {
     "url": "https://github.com/abelmcelroy/mtg-calc/issues"
   },
-  "homepage": "https://github.com/abelmcelroy/mtg-calc#readme"
+  "homepage": "https://github.com/abelmcelroy/mtg-calc#readme",
+  "dependencies": {
+    "bignumber.js": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "tap": "^21.0.1",
+    "typescript": "^5.7.3"
+  }
 }

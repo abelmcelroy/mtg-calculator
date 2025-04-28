@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+.nyc_output
+.vscode
+data/*.json
+.abels_notes.md
+__pycache__/
+*.pyc
+.DS_STORE
+.tap
+venv
+dist/
