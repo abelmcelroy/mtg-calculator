@@ -6,16 +6,16 @@ import { Card, Deck, PreprocessedAlgoInput, AlgoInput, AlgoResult, AlgoOptions, 
 const DEFAULT_MAX_COMPLEXITY = 30000;
 const DEFAULT_SIMULATION_ITERATIONS = 10000;
 
-function generateAlgoInputs(card: Card, deck: Deck): AlgoInput {
+function generateAlgoInputs(card: Card, deck: Deck, turn?: number): AlgoInput {
   const CMC: number = convertedManaCost(card);
-  const totalDraws = 6 + CMC;
+  const totalDraws = (turn ?? CMC) + 6;
   const algoInputs: PreprocessedAlgoInput = preprocessInput(deck, card, totalDraws);
   algoInputs.totalDraws = totalDraws; // this ensured the type is AlgoResult (stronger) rather than PreprocessedAlgoInput (weaker), so coercion on next line is OK
   return algoInputs as AlgoInput;
 }
 
 export function computeCurve(card: Card, deck: Deck, options?: AlgoOptions): Calculations {
-  const { deckBins, costBins, tapBins, relevantBinsMap, relevantBinsReverseMap, deckInfo, totalDraws } = generateAlgoInputs(card, deck);
+  const { deckBins, costBins, tapBins, relevantBinsMap, relevantBinsReverseMap, deckInfo, totalDraws } = generateAlgoInputs(card, deck, options?.upToTurn);
   let results: Calculations;
   const maxComplexity = options?.maxComplexity ?? DEFAULT_MAX_COMPLEXITY;
   const simulationIterations = options?.simulationOptions?.iterations ?? DEFAULT_SIMULATION_ITERATIONS;

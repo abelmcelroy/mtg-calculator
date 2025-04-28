@@ -91,7 +91,7 @@ const transformationLookup: Record<string, TransformationFunction> = {
 };
 
 export function scryfallToCard(partialScryfallCard: PartialScryfallCard): Card {
-  const card: Partial<Card> = { name: partialScryfallCard.name };
+  const card: Partial<Card> = { name: partialScryfallCard.name, quantity: partialScryfallCard.quantity ?? 1 };
 
   for (const key in transformationLookup) {
     const transformedValue = transformationLookup[key](partialScryfallCard);
