@@ -1,8 +1,8 @@
-# MtG Calc
+# MtG Calculator
 
 ## Installation
 ```bash
-npm i mtg-calc
+npm i mtg-calculator
 ```
 
 ## Getting started
