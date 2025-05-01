@@ -160,3 +160,7 @@ enum ProbabilityTypes {
 
 type Probability = string // representing a number between 0-1, up to 20 decimal places
 ```
+
+## License
+This project is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
+**Non-commercial use only.** For commercial use, contact abel.h.mcelroy@gmail.com
