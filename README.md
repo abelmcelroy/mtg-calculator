@@ -7,7 +7,7 @@ npm i mtg-calculator
 
 ## Getting started
 ```
-import { computeCurve } from 'mtg-calc';
+import { computeCurve } from 'mtg-calculator';
 
 const island = {
   name: 'Island',
