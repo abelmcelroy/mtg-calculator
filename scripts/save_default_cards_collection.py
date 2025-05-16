@@ -4,7 +4,7 @@ import json
 # check out scryfall to get most recent bulk data
 scryfall_bulk_data = requests.get("https://api.scryfall.com/bulk-data")
 # find the uri for the "default_cards" collection
-default_cards_uri = next((bulk_data for bulk_data in json.loads(scryfall_bulk_data.text)["data"] if bulk_data["type"] == "default_cards"), None)["download_uri"]
+default_cards_uri = next((bulk_data for bulk_data in json.loads(scryfall_bulk_data.text)["data"] if bulk_data["type"] == "default_cards"), None)["download_uri"] # type: ignore
 # request the "default_cards" collection
 default_cards = requests.get(default_cards_uri)
 # write the response to a JSON file

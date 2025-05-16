@@ -13,4 +13,4 @@ echo "gathering data..."
 
 echo "making sure things look good"
 npm run typecheck
-npm run test-algo
+npm run tests

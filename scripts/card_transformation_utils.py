@@ -29,7 +29,7 @@ def tap_land(card):
   if card_type(card) != "Land":
     return None
 
-  has_tap_land_phrase = lambda c: re.search(f"(NAME enters the battlefield tapped.(?!unless))|(Hideaway)|(NAME enters tapped)", c["oracle_text"].replace(c["name"], "NAME")) != None
+  has_tap_land_phrase = lambda c: re.search(f"(NAME enters the battlefield tapped.(?!unless))|(Hideaway)|(NAME enters tapped)|([Tt]his land enters tapped)", c["oracle_text"].replace(c["name"], "NAME")) != None
   is_tap_land = None
 
   if "card_faces" in card:
