@@ -3,7 +3,8 @@
 // the algorithms they're using (which they are named by) are far more ubiquitous
 function MurmurHash3(string) {
   let i = 0;
-  for (i, hash = 1779033703 ^ string.length; i < string.length; i++) {
+  let hash = 1779033703 ^ string.length
+  for (; i < string.length; i++) {
       let bitwise_xor_from_character = hash ^ string.charCodeAt(i);
       hash = Math.imul(bitwise_xor_from_character, 3432918353);
       hash = hash << 13 | hash >>> 19;
