@@ -298,7 +298,7 @@ function copyShallow(variable) {
   return variableCopy
 }
 
-export {
+module.exports = {
   fisherYates,
   simulateDraws,
   rand,
