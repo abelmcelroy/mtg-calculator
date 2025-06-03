@@ -1,5 +1,5 @@
-const bigNum = require("bignumber.js")
-const { postProcess, nCk, factorial, binKeySort } = require("./probabilityCalculatorUtils")
+import bigNum from "bignumber.js";
+import { postProcess, nCk, factorial, binKeySort } from "./probabilityCalculatorUtils.js";
 
 // for copying one-layer-deep arrays or json
 function copyShallow(variable) {
@@ -217,6 +217,6 @@ function computeProbabilities(deckBins, costBins, tapBins, relevantBinsMap, rele
   return postProcess(results, deckBins, startingHandSize, totalDraws, deckInfo, CMC, nCkCache);
 }
 
-module.exports = {
+export {
   computeProbabilities
 }

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "ES2020",
     "target": "es2019",
     "allowJs": true,
     "checkJs": false,

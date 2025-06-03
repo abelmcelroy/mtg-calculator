@@ -1,4 +1,4 @@
-const bigNum = require("bignumber.js")
+import bigNum from "bignumber.js";
 
 function binKeySort (arr) {
   return arr.sort((a, b) => a === "O" ? 1 : b === "O" ? -1 : a.length > b.length ? -1 : a.length < b.length ? 1 : 0);
@@ -196,7 +196,7 @@ function factorial(n) {
   return Fn
 }
 
-module.exports = {
+export {
   sum,
   nCk,
   factorial,

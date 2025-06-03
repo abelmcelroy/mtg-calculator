@@ -1,6 +1,6 @@
-import { complexity, convertedManaCost, preprocessInput } from "./probabilityCalculatorUtils";
-import { computeProbabilities } from "./probabilityCalculator";
-import { simulateDraws } from "./statisticalSimulator";
+import { complexity, convertedManaCost, preprocessInput } from "./probabilityCalculatorUtils.js";
+import { computeProbabilities } from "./probabilityCalculator.js";
+import { simulateDraws } from "./statisticalSimulator.js";
 import { Card, Deck, PreprocessedAlgoInput, AlgoInput, AlgoResult, AlgoOptions, Calculations } from "./types";
 
 const DEFAULT_MAX_COMPLEXITY = 30000;

@@ -1,16 +1,17 @@
 {
   "name": "mtg-calculator",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "an MtG calculator for computing the probability of being able to draw and play cards from a deck",
   "main": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
